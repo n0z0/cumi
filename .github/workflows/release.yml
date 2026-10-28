@@ -19,6 +19,8 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -85,18 +87,26 @@ jobs:
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew --no-daemon assembleRelease \
+          ./gradlew --no-daemon assembleRelease bundleRelease \
             -PappVersionName=${{ steps.version.outputs.name }} \
             -PappVersionCode=${{ steps.version.outputs.code }}
 
-      - name: Prepare artifact
-        id: apk
+      - name: Prepare artifacts
+        id: artifacts
         run: |
-          src=$(ls app/build/outputs/apk/release/*.apk | head -n1)
-          out="KaosKaki-${{ steps.version.outputs.tag }}.apk"
-          cp "$src" "$out"
-          sha256sum "$out" > "$out.sha256"
-          echo "file=$out" >> "$GITHUB_OUTPUT"
+          base="KaosKaki-${{ steps.version.outputs.tag }}"
+          cp "$(ls app/build/outputs/apk/release/*.apk | head -n1)" "$base.apk"
+          cp app/build/outputs/bundle/release/app-release.aab "$base.aab"
+          sha256sum "$base.apk" "$base.aab" > "$base.sha256"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+
+          # "What's new" for Play: commit subjects since the previous tag, trimmed to Play's 500-char limit.
+          prev=$(git describe --tags --abbrev=0 --match 'v*' HEAD^ 2>/dev/null || true)
+          range=${prev:+$prev..HEAD}
+          notes=$(git log ${range:-HEAD} --no-merges --pretty='• %s' | head -n 10 | cut -c1-120)
+          mkdir -p whatsnew
+          printf '%s\n' "$notes" | head -c 500 > whatsnew/whatsnew-en-US
+          cp whatsnew/whatsnew-en-US whatsnew/whatsnew-id
 
       - name: Create tag and GitHub release
         uses: softprops/action-gh-release@v3
@@ -106,5 +116,22 @@ jobs:
           name: KaosKaki ${{ steps.version.outputs.tag }}
           generate_release_notes: true
           files: |
-            ${{ steps.apk.outputs.file }}
-            ${{ steps.apk.outputs.file }}.sha256
+            ${{ steps.artifacts.outputs.base }}.apk
+            ${{ steps.artifacts.outputs.base }}.aab
+            ${{ steps.artifacts.outputs.base }}.sha256
+
+      # Runs only once PLAY_SERVICE_ACCOUNT_JSON is configured (see PLAY_STORE.md).
+      # Repository variables PLAY_TRACK (default: internal) and PLAY_RELEASE_STATUS
+      # (default: completed; use "draft" until the app has been published once) tune it.
+      - name: Upload to Google Play
+        if: env.PLAY_SERVICE_ACCOUNT_JSON != ''
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ env.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: id.biz.id.kaoskaki
+          releaseFiles: ${{ steps.artifacts.outputs.base }}.aab
+          releaseName: ${{ steps.version.outputs.tag }}
+          track: ${{ vars.PLAY_TRACK || 'internal' }}
+          status: ${{ vars.PLAY_RELEASE_STATUS || 'completed' }}
+          whatsNewDirectory: whatsnew
+          mappingFile: app/build/outputs/mapping/release/mapping.txt

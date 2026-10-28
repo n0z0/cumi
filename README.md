@@ -152,7 +152,7 @@ Some phones (Xiaomi, Oppo, Vivo, Samsung, Huawei, …) close background apps agg
 
 ## Building
 
-Requires JDK 17 and the Android SDK (API 35).
+Requires JDK 17 and the Android SDK (API 36).
 
 ```sh
 ./gradlew assembleDebug     # app/build/outputs/apk/debug/
@@ -168,7 +168,10 @@ Every push to `main` runs `.github/workflows/release.yml`, which:
    - `#minor` or a `feat:` commit bumps the minor version
    - anything else bumps the patch version
 2. Builds a signed release APK (`versionCode = major*1000000 + minor*1000 + patch`).
-3. Creates the tag and a GitHub Release with the APK and its SHA-256 checksum attached.
+3. Creates the tag and a GitHub Release with the APK, the Play App Bundle (`.aab`) and SHA-256 checksums attached.
+4. Uploads the bundle to Google Play when the `PLAY_SERVICE_ACCOUNT_JSON` secret is configured.
+
+See [PLAY_STORE.md](PLAY_STORE.md) for the Google Play publishing guide and [PRIVACY.md](PRIVACY.md) for the privacy policy.
 
 Changes that only touch Markdown files, `LICENSE` or `.gitignore` do not trigger a release.
 Pull requests and other branches only build a debug APK (`build.yml`).

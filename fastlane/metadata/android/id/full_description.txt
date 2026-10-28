@@ -1,0 +1,33 @@
+KaosKaki mengubah ponsel Android Anda menjadi server proxy SOCKS5. Laptop, tablet, dan perangkat lain yang berada di jaringan Wi-Fi yang sama, hotspot, atau sambungan USB bisa memakai koneksi internet ponsel Anda.
+
+MUDAH
+• Sekali ketuk untuk menyalakan atau mematikan proxy
+• Semua alamat proxy (Wi-Fi, hotspot, USB, Bluetooth) ditampilkan dan bisa disalin sekali ketuk
+• Panduan koneksi langkah demi langkah di dalam aplikasi
+
+ANDAL
+• Berjalan di latar belakang dengan notifikasi status dan tombol Hentikan
+• Opsi menjaga CPU dan Wi-Fi tetap aktif agar proxy tetap responsif saat layar mati
+• Mendukung tujuan IPv4, IPv6, dan nama domain
+
+AMAN
+• Autentikasi nama pengguna dan sandi (opsional)
+• Tanpa akun, tanpa iklan, tanpa analitik: tidak ada data yang dikumpulkan atau dikirim ke kami
+
+INFORMATIF
+• Statistik langsung: koneksi aktif, data terkirim dan diterima, kecepatan, dan waktu aktif
+• Log aktivitas setiap koneksi lengkap dengan tujuan, jumlah data, dan durasi
+
+CARA KERJA
+1. Ketuk tombol daya di KaosKaki.
+2. Sambungkan perangkat lain ke jaringan yang sama atau ke hotspot ponsel Anda.
+3. Atur proxy perangkat tersebut ke SOCKS5 dengan alamat dan port yang tampil di aplikasi (bawaan 1080).
+
+Bisa dipakai dengan browser seperti Firefox, Telegram, curl, git, dan aplikasi lain yang mendukung proxy SOCKS5.
+
+CATATAN
+• KaosKaki meneruskan koneksi TCP (SOCKS5 CONNECT). Aplikasi berbasis UDP seperti panggilan suara dan banyak game tidak didukung.
+• Lalu lintas melalui proxy memakai kuota data ponsel Anda. Periksa ketentuan operator Anda tentang berbagi koneksi.
+• Aktifkan autentikasi saat memakai jaringan bersama agar orang lain tidak bisa memakai koneksi Anda.
+
+KaosKaki adalah perangkat lunak sumber terbuka berlisensi GPL-3.0.

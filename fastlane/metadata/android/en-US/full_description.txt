@@ -1,0 +1,33 @@
+KaosKaki turns your Android phone into a SOCKS5 proxy server. Laptops, tablets and other devices on the same Wi-Fi network, hotspot or USB connection can browse and work through your phone's internet connection.
+
+SIMPLE
+• One tap to start or stop the proxy
+• Every address the proxy can be reached on (Wi-Fi, hotspot, USB, Bluetooth) is listed with one-tap copy
+• Step-by-step connection guide inside the app
+
+RELIABLE
+• Runs in the background with a status notification and a Stop button
+• Optional CPU and Wi-Fi wake locks keep the proxy responsive with the screen off
+• Supports IPv4, IPv6 and domain-name destinations
+
+SECURE
+• Optional username and password authentication
+• No accounts, no ads, no analytics: nothing is collected or sent to us
+
+INSIGHTFUL
+• Live statistics: active connections, data uploaded and downloaded, speed and uptime
+• Activity log of every connection with destination, traffic and duration
+
+HOW IT WORKS
+1. Tap the power button in KaosKaki.
+2. Connect the other device to the same network or to your phone's hotspot.
+3. Set its proxy to SOCKS5 using the address and port shown in the app (default 1080).
+
+Works with browsers such as Firefox, with Telegram, curl, git and other apps that support SOCKS5 proxies.
+
+NOTES
+• KaosKaki proxies TCP connections (SOCKS5 CONNECT). UDP-based apps such as voice calls and many games are not supported.
+• Traffic through the proxy uses your phone's data plan. Check your carrier's terms for sharing your connection.
+• Turn on authentication when using shared networks so others cannot use your connection.
+
+KaosKaki is open source under the GPL-3.0 license.
