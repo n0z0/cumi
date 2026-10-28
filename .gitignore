@@ -41,6 +41,7 @@ captures/
 *.jks
 *.keystore
 keystore.properties
+.signing-old/
 
 # IDE
 .idea/
