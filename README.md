@@ -55,22 +55,40 @@ Pull requests and other branches only build a debug APK (`build.yml`).
 
 ### Signing
 
-Without signing secrets the release APK is signed with a throwaway debug key. It installs fine, but each
-release has a different signature, so updating means uninstalling first. To sign with your own key:
+Release builds are signed with `release.jks`, described by `keystore.properties` in the project root.
+Both files are git-ignored. **Back them up somewhere safe**: if the key is lost, installed copies can no
+longer be updated and users must uninstall first.
 
-```sh
-keytool -genkeypair -v -keystore release.jks -alias kaoskaki -keyalg RSA -keysize 4096 -validity 10000
-base64 -w0 release.jks   # paste the output into the secret below
+`keystore.properties` format:
+
+```properties
+storeFile=release.jks
+storePassword=...
+keyAlias=kaoskaki
+keyPassword=...
 ```
 
-Add these repository secrets (Settings → Secrets and variables → Actions):
+To create a new key instead:
+
+```sh
+keytool -genkeypair -v -storetype PKCS12 -keystore release.jks -alias kaoskaki -keyalg RSA -keysize 4096 -validity 10000
+```
+
+CI reads the same key from repository secrets. Upload them with the GitHub CLI, logged in as an account
+with admin access to the repository:
+
+```sh
+./scripts/set-signing-secrets.sh            # defaults to n0z0/kaoskaki
+```
 
 | Secret | Value |
 | --- | --- |
 | `SIGNING_KEYSTORE_BASE64` | base64 of `release.jks` |
 | `SIGNING_STORE_PASSWORD` | keystore password |
-| `SIGNING_KEY_ALIAS` | key alias (e.g. `kaoskaki`) |
+| `SIGNING_KEY_ALIAS` | key alias (`kaoskaki`) |
 | `SIGNING_KEY_PASSWORD` | key password |
+
+Without these secrets CI falls back to a throwaway debug key.
 
 ## License
 

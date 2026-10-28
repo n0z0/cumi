@@ -37,8 +37,10 @@ captures/
 .cxx/
 *.apk
 *.aab
+# Release signing (keep private, back up offline)
 *.jks
 *.keystore
+keystore.properties
 
 # IDE
 .idea/

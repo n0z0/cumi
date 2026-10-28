@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -8,9 +10,15 @@ plugins {
 val appVersionName = (findProperty("appVersionName") as String?) ?: "1.0.0-dev"
 val appVersionCode = (findProperty("appVersionCode") as String?)?.toInt() ?: 1
 
-// Release signing comes from environment variables (see README). Without them the
-// release build is signed with the debug key so the APK is still installable.
+// Release signing: CI passes environment variables, local builds read the git-ignored
+// keystore.properties (see README). Without either, the debug key is used.
+val keystoreProps = Properties().apply {
+    rootProject.file("keystore.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+}
+fun signingValue(env: String, prop: String): String? = System.getenv(env) ?: keystoreProps.getProperty(prop)
+
 val releaseKeystore: String? = System.getenv("SIGNING_KEYSTORE_PATH")
+    ?: keystoreProps.getProperty("storeFile")?.let { rootProject.file(it).path }
 
 android {
     namespace = "id.biz.id.kaoskaki"
@@ -28,9 +36,9 @@ android {
         if (releaseKeystore != null) {
             create("release") {
                 storeFile = file(releaseKeystore)
-                storePassword = System.getenv("SIGNING_STORE_PASSWORD")
-                keyAlias = System.getenv("SIGNING_KEY_ALIAS")
-                keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+                storePassword = signingValue("SIGNING_STORE_PASSWORD", "storePassword")
+                keyAlias = signingValue("SIGNING_KEY_ALIAS", "keyAlias")
+                keyPassword = signingValue("SIGNING_KEY_PASSWORD", "keyPassword")
             }
         }
     }
