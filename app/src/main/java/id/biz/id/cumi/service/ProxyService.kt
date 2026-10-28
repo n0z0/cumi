@@ -17,7 +17,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import id.biz.id.cumi.KaosKakiApplication
+import id.biz.id.cumi.CumiApplication
 import id.biz.id.cumi.MainActivity
 import id.biz.id.cumi.R
 import id.biz.id.cumi.data.SettingsRepository
@@ -164,11 +164,11 @@ class ProxyService : Service() {
     @SuppressLint("WakelockTimeout")
     private fun acquireLocks() {
         wakeLock = getSystemService<PowerManager>()
-            ?.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "KaosKaki:proxy")
+            ?.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Cumi:proxy")
             ?.apply { acquire() }
         @Suppress("DEPRECATION")
         wifiLock = applicationContext.getSystemService<WifiManager>()
-            ?.createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, "KaosKaki:proxy")
+            ?.createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, "Cumi:proxy")
             ?.apply { acquire() }
     }
 
@@ -199,7 +199,7 @@ class ProxyService : Service() {
             Intent(this, ProxyService::class.java).setAction(ACTION_STOP),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT,
         )
-        return NotificationCompat.Builder(this, KaosKakiApplication.CHANNEL_PROXY)
+        return NotificationCompat.Builder(this, CumiApplication.CHANNEL_PROXY)
             .setSmallIcon(R.drawable.ic_stat_proxy)
             .setContentTitle(getString(R.string.notification_title))
             .setContentText(text)

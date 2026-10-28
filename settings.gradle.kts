@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KaosKaki"
+rootProject.name = "Cumi"
 include(":app")

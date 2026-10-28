@@ -1,4 +1,4 @@
-KaosKaki mengubah ponsel Android Anda menjadi server proxy SOCKS5. Laptop, tablet, dan perangkat lain yang berada di jaringan Wi-Fi yang sama, hotspot, atau sambungan USB bisa memakai koneksi internet ponsel Anda.
+Cumi mengubah ponsel Android Anda menjadi server proxy SOCKS5. Laptop, tablet, dan perangkat lain yang berada di jaringan Wi-Fi yang sama, hotspot, atau sambungan USB bisa memakai koneksi internet ponsel Anda.
 
 MUDAH
 • Sekali ketuk untuk menyalakan atau mematikan proxy
@@ -19,15 +19,15 @@ INFORMATIF
 • Log aktivitas setiap koneksi lengkap dengan tujuan, jumlah data, dan durasi
 
 CARA KERJA
-1. Ketuk tombol daya di KaosKaki.
+1. Ketuk tombol daya di Cumi.
 2. Sambungkan perangkat lain ke jaringan yang sama atau ke hotspot ponsel Anda.
 3. Atur proxy perangkat tersebut ke SOCKS5 dengan alamat dan port yang tampil di aplikasi (bawaan 1080).
 
 Bisa dipakai dengan browser seperti Firefox, Telegram, curl, git, dan aplikasi lain yang mendukung proxy SOCKS5.
 
 CATATAN
-• KaosKaki meneruskan koneksi TCP (SOCKS5 CONNECT). Aplikasi berbasis UDP seperti panggilan suara dan banyak game tidak didukung.
+• Cumi meneruskan koneksi TCP (SOCKS5 CONNECT). Aplikasi berbasis UDP seperti panggilan suara dan banyak game tidak didukung.
 • Lalu lintas melalui proxy memakai kuota data ponsel Anda. Periksa ketentuan operator Anda tentang berbagi koneksi.
 • Aktifkan autentikasi saat memakai jaringan bersama agar orang lain tidak bisa memakai koneksi Anda.
 
-KaosKaki adalah perangkat lunak sumber terbuka berlisensi GPL-3.0.
+Cumi adalah perangkat lunak sumber terbuka berlisensi GPL-3.0.

@@ -6,7 +6,7 @@ import android.app.NotificationManager
 import android.os.Build
 import androidx.core.content.getSystemService
 
-class KaosKakiApplication : Application() {
+class CumiApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

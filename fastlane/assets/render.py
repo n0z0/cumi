@@ -1,7 +1,7 @@
 """Renders the Play Store icon and feature graphic.
 
 Usage: python3 fastlane/assets/render.py   (needs Pillow, ImageMagick and the Inter font)
-The sock artwork in sock.svg mirrors app/src/main/res/drawable/ic_launcher_foreground.xml.
+The squid artwork in squid.svg mirrors app/src/main/res/drawable/ic_launcher_foreground.xml (eyes are cut-outs there).
 """
 import shutil
 import subprocess
@@ -26,11 +26,11 @@ def gradient(size, top_left, bottom_right):
     return img
 
 
-def sock(size):
+def squid(size):
     with tempfile.TemporaryDirectory() as tmp:
-        out = Path(tmp) / "sock.png"
+        out = Path(tmp) / "squid.png"
         subprocess.run(
-            ["convert", "-background", "none", "-density", "600", str(HERE / "sock.svg"),
+            ["convert", "-background", "none", "-density", "600", str(HERE / "squid.svg"),
              "-resize", f"{size}x{size}", str(out)],
             check=True,
         )
@@ -41,7 +41,7 @@ def icon():
     img = gradient((512, 512), (0x00, 0x75, 0x7A), (0x00, 0x43, 0x47)).convert("RGBA")
     # Inset the artwork so Play's rounded-corner mask never clips it.
     art = 448
-    img.alpha_composite(sock(art), ((512 - art) // 2, (512 - art) // 2))
+    img.alpha_composite(squid(art), ((512 - art) // 2, (512 - art) // 2))
     return img.convert("RGB")
 
 
@@ -75,7 +75,7 @@ def feature_graphic():
     bold = ImageFont.truetype(str(FONT_DIR / "Inter-Bold.otf"), 84)
     regular = ImageFont.truetype(str(FONT_DIR / "Inter-Regular.otf"), 34)
     semibold = ImageFont.truetype(str(FONT_DIR / "Inter-SemiBold.otf"), 22)
-    d.text((330, 158), "KaosKaki", font=bold, fill="#FFFFFF")
+    d.text((330, 158), "Cumi", font=bold, fill="#FFFFFF")
     d.text((334, 262), "SOCKS5 proxy server for your phone", font=regular, fill="#B8F1F4")
 
     x = 334

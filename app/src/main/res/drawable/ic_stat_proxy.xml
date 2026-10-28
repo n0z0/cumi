@@ -4,7 +4,42 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
+    <!-- Same artwork as the launcher icon, mapped from its 18..90 visible area. -->
+    <group
+        android:scaleX="0.3333"
+        android:scaleY="0.3333"
+        android:translateX="-6"
+        android:translateY="-6">
+    <path
+        android:pathData="M47.5,61 C46,68 41,70 39,76"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+    <path
+        android:pathData="M51.5,62 C51.5,69 48.5,72 48.5,79"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+    <path
+        android:pathData="M56.5,62 C56.5,69 59.5,72 59.5,79"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+    <path
+        android:pathData="M60.5,61 C62,68 67,70 69,76"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M7,2h9c0.55,0 1,0.45 1,1v2c0,0.55 -0.45,1 -1,1H7C6.45,6 6,5.55 6,5V3C6,2.45 6.45,2 7,2zM7.5,7h8v6.4l3.6,2.4c1.3,0.9 1.5,2.7 0.4,3.8c-0.8,0.8 -2.1,1 -3.1,0.4l-7.2,-4.3C8.1,15.2 7.5,14.2 7.5,13.1V7z" />
+        android:pathData="M35.3,77.5 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 M45.3,80.5 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 M56.3,80.5 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 M66.3,77.5 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M43.5,38 L34,45 C33.2,45.6 33.5,46.8 34.5,47 L43.5,49 Z M64.5,38 L74,45 C74.8,45.6 74.5,46.8 73.5,47 L64.5,49 Z" />
+    <!-- Mantle; the eyes are cut out so the monochrome (themed) icon keeps them. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M54,24 C60,29.5 64.5,35.5 64.5,43 L64.5,57.5 C64.5,60.5 62,63 59,63 L49,63 C46,63 43.5,60.5 43.5,57.5 L43.5,43 C43.5,35.5 48,29.5 54,24 Z M47.2,54.5 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0 M55.6,54.5 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+    </group>
 </vector>

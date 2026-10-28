@@ -1,6 +1,6 @@
 # Publikasi ke Google Play
 
-Panduan langkah demi langkah untuk merilis KaosKaki di Google Play. Semua bahan listing ada di repo ini:
+Panduan langkah demi langkah untuk merilis Cumi di Google Play. Semua bahan listing ada di repo ini:
 
 | Bahan | Lokasi |
 | --- | --- |
@@ -8,7 +8,7 @@ Panduan langkah demi langkah untuk merilis KaosKaki di Google Play. Semua bahan 
 | Ikon 512×512, feature graphic 1024×500 | `fastlane/metadata/android/{en-US,id}/images/` (render ulang: `python3 fastlane/assets/render.py`) |
 | Screenshot ponsel | `fastlane/metadata/android/{en-US,id}/images/phoneScreenshots/` (**perlu diisi**, lihat langkah 5) |
 | Kebijakan privasi | `PRIVACY.md` → `https://github.com/n0z0/cumi/blob/main/PRIVACY.md` |
-| File unggahan (AAB) | Lampiran setiap GitHub Release: `KaosKaki-vX.Y.Z.aab` |
+| File unggahan (AAB) | Lampiran setiap GitHub Release: `Cumi-vX.Y.Z.aab` |
 
 ## 1. Akun developer
 
@@ -20,7 +20,7 @@ Panduan langkah demi langkah untuk merilis KaosKaki di Google Play. Semua bahan 
 
 *Play Console → Create app*
 
-- App name: `KaosKaki - SOCKS5 Proxy`
+- App name: `Cumi - SOCKS5 Proxy`
 - Default language: `English (United States) – en-US`
 - App or game: **App**, Free or paid: **Free**
 - Centang pernyataan kebijakan → **Create app**
@@ -37,7 +37,7 @@ menjadi **upload key**, terdaftar otomatis saat AAB pertama diunggah.
 
 API Play tidak bisa membuat rilis pertama, jadi unggahan pertama dilakukan lewat browser:
 
-1. Unduh `KaosKaki-vX.Y.Z.aab` dari [Releases](https://github.com/n0z0/cumi/releases/latest).
+1. Unduh `Cumi-vX.Y.Z.aab` dari [Releases](https://github.com/n0z0/cumi/releases/latest).
 2. *Test and release → Testing → Internal testing → Create new release* → unggah AAB → isi catatan rilis → **Save** → **Review release** → **Start rollout**.
 3. Tambahkan email penguji di tab *Testers*.
 
@@ -80,12 +80,12 @@ Jawaban yang sesuai dengan perilaku aplikasi:
 
 ### Foreground service
 
-KaosKaki memakai `FOREGROUND_SERVICE_SPECIAL_USE`, jadi Play meminta deklarasi. Isi di *App content → Foreground service permissions*:
+Cumi memakai `FOREGROUND_SERVICE_SPECIAL_USE`, jadi Play meminta deklarasi. Isi di *App content → Foreground service permissions*:
 
 - Pilih **Special use** dan centang bahwa fitur ini dimulai oleh pengguna.
 - **Description** (salin):
 
-  > KaosKaki is a SOCKS5 proxy server that lets the user share the phone's internet connection with their other devices
+  > Cumi is a SOCKS5 proxy server that lets the user share the phone's internet connection with their other devices
   > (laptop, tablet) on the same Wi-Fi network, hotspot or USB tether. The user starts the proxy with the power button
   > and it must keep accepting and relaying network connections from those devices while the app is in the background
   > or the screen is off. Stopping the service would immediately drop every connected device's traffic. The service
@@ -110,7 +110,7 @@ Setelah unggahan pertama selesai, setiap push ke `main` bisa langsung mengunggah
 1. **Google Cloud**: buat project (atau pakai yang ada) → aktifkan **Google Play Android Developer API** →
    *IAM & Admin → Service Accounts → Create* → buat key **JSON** dan unduh.
 2. **Play Console**: *Users and permissions → Invite new users* → masukkan email service account →
-   *App permissions* → pilih KaosKaki → beri izin **Release apps to testing tracks** (dan **Release to production** bila perlu) → kirim undangan.
+   *App permissions* → pilih Cumi → beri izin **Release apps to testing tracks** (dan **Release to production** bila perlu) → kirim undangan.
 3. **GitHub** (login `gh` sebagai `awangga`):
 
    ```sh

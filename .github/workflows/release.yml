@@ -94,7 +94,7 @@ jobs:
       - name: Prepare artifacts
         id: artifacts
         run: |
-          base="KaosKaki-${{ steps.version.outputs.tag }}"
+          base="Cumi-${{ steps.version.outputs.tag }}"
           cp "$(ls app/build/outputs/apk/release/*.apk | head -n1)" "$base.apk"
           cp app/build/outputs/bundle/release/app-release.aab "$base.aab"
           sha256sum "$base.apk" "$base.aab" > "$base.sha256"
@@ -113,7 +113,7 @@ jobs:
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           target_commitish: ${{ github.sha }}
-          name: KaosKaki ${{ steps.version.outputs.tag }}
+          name: Cumi ${{ steps.version.outputs.tag }}
           generate_release_notes: true
           files: |
             ${{ steps.artifacts.outputs.base }}.apk

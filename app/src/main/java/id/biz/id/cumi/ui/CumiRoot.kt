@@ -54,7 +54,7 @@ private enum class Tab(@StringRes val label: Int, val icon: ImageVector) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun KaosKakiRoot(viewModel: MainViewModel = viewModel()) {
+fun CumiRoot(viewModel: MainViewModel = viewModel()) {
     val context = LocalContext.current
     val status by viewModel.status.collectAsStateWithLifecycle()
     val stats by viewModel.stats.collectAsStateWithLifecycle()

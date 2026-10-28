@@ -1,13 +1,13 @@
-# KaosKaki Privacy Policy
+# Cumi Privacy Policy
 
 _Effective date: 29 October 2026_
 
-KaosKaki ("the app") is an open-source SOCKS5 proxy server for Android, published by the KaosKaki
+Cumi ("the app") is an open-source SOCKS5 proxy server for Android, published by the Cumi
 developers (https://github.com/n0z0/cumi).
 
 ## Summary
 
-**KaosKaki does not collect, store, or share any personal data.** The app has no accounts, no ads,
+**Cumi does not collect, store, or share any personal data.** The app has no accounts, no ads,
 no analytics, and no crash reporting, and it never sends data to the developers or to any third party.
 
 ## What the app handles
@@ -44,11 +44,11 @@ Questions about this policy: open an issue at https://github.com/n0z0/cumi/issue
 
 ---
 
-# Kebijakan Privasi KaosKaki
+# Kebijakan Privasi Cumi
 
 _Berlaku sejak: 29 Oktober 2026_
 
-**KaosKaki tidak mengumpulkan, menyimpan, atau membagikan data pribadi apa pun.** Aplikasi ini tidak memiliki akun,
+**Cumi tidak mengumpulkan, menyimpan, atau membagikan data pribadi apa pun.** Aplikasi ini tidak memiliki akun,
 iklan, analitik, maupun pelaporan crash, dan tidak pernah mengirim data ke pengembang atau pihak ketiga.
 
 - **Pengaturan proxy** (port, nama pengguna dan sandi opsional, opsi daya) hanya disimpan di penyimpanan privat aplikasi di perangkat Anda.

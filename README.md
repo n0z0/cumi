@@ -1,4 +1,4 @@
-# KaosKaki
+# Cumi
 
 Native Android app (Kotlin + Jetpack Compose) that turns your phone into a **SOCKS5 proxy server**,
 so other devices on the same Wi-Fi network, hotspot, or USB tether can use the phone's internet connection.
@@ -18,8 +18,8 @@ UDP `ASSOCIATE` and `BIND` are not supported; clients receive the standard "comm
 
 ## Quickstart
 
-1. Download the latest `KaosKaki-vX.Y.Z.apk` from [Releases](https://github.com/n0z0/cumi/releases/latest) and install it on the phone that has the internet connection.
-2. Open **KaosKaki** and tap the large **power button**. The status changes to **Running**.
+1. Download the latest `Cumi-vX.Y.Z.apk` from [Releases](https://github.com/n0z0/cumi/releases/latest) and install it on the phone that has the internet connection.
+2. Open **Cumi** and tap the large **power button**. The status changes to **Running**.
 3. Connect your laptop (or other device) to the same Wi-Fi network, or to the phone's hotspot.
 4. On the laptop, set a **SOCKS5** proxy to the address shown under **Proxy address** (for example `192.168.43.1`, port `1080`).
 5. Check that it works:
@@ -126,9 +126,9 @@ built-in SOCKS5 support (for example Telegram or Firefox).
 
 Some phones (Xiaomi, Oppo, Vivo, Samsung, Huawei, …) close background apps aggressively. If the proxy stops on its own:
 
-1. *Settings → Apps → KaosKaki → Battery* → set to **Unrestricted** (or "No restrictions" / "Don't optimise").
-2. On Xiaomi/MIUI, also enable **Autostart** for KaosKaki.
-3. Keep **Keep connection awake** on in KaosKaki settings.
+1. *Settings → Apps → Cumi → Battery* → set to **Unrestricted** (or "No restrictions" / "Don't optimise").
+2. On Xiaomi/MIUI, also enable **Autostart** for Cumi.
+3. Keep **Keep connection awake** on in Cumi settings.
 
 ### Troubleshooting
 
@@ -187,14 +187,14 @@ longer be updated and users must uninstall first.
 ```properties
 storeFile=release.jks
 storePassword=...
-keyAlias=kaoskaki
+keyAlias=cumi
 keyPassword=...
 ```
 
 To create a new key instead:
 
 ```sh
-keytool -genkeypair -v -storetype PKCS12 -keystore release.jks -alias kaoskaki -keyalg RSA -keysize 4096 -validity 10000
+keytool -genkeypair -v -storetype PKCS12 -keystore release.jks -alias cumi -keyalg RSA -keysize 4096 -validity 10000
 ```
 
 CI reads the same key from repository secrets. Upload them with the GitHub CLI, logged in as an account
@@ -208,7 +208,7 @@ with admin access to the repository:
 | --- | --- |
 | `SIGNING_KEYSTORE_BASE64` | base64 of `release.jks` |
 | `SIGNING_STORE_PASSWORD` | keystore password |
-| `SIGNING_KEY_ALIAS` | key alias (`kaoskaki`) |
+| `SIGNING_KEY_ALIAS` | key alias (`cumi`) |
 | `SIGNING_KEY_PASSWORD` | key password |
 
 Without these secrets CI falls back to a throwaway debug key.

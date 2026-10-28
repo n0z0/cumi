@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KaosKaki</string>
+    <string name="app_name">Cumi</string>
     <string name="app_tagline">SOCKS5 Proxy Server</string>
 
     <string name="tab_home">Dashboard</string>
