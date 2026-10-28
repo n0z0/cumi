@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KaosKaki</string>
+    <string name="app_tagline">SOCKS5 Proxy Server</string>
+
+    <string name="tab_home">Dashboard</string>
+    <string name="tab_logs">Activity</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="status_running">Running</string>
+    <string name="status_starting">Starting…</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_error">Failed to start</string>
+    <string name="hint_running">Other devices on your network can now connect through this phone.</string>
+    <string name="hint_starting">Opening the SOCKS5 port…</string>
+    <string name="hint_stopped">Tap the button to share this phone\'s internet connection over SOCKS5.</string>
+
+    <string name="action_start">Start proxy</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_clear_logs">Clear activity</string>
+    <string name="action_toggle_password">Show or hide password</string>
+    <string name="copied">Copied to clipboard</string>
+
+    <string name="section_endpoints">Proxy address</string>
+    <string name="section_credentials">Credentials</string>
+    <string name="section_howto">How to connect</string>
+    <string name="no_network">No network found. Join a Wi-Fi network or turn on the hotspot.</string>
+
+    <string name="iface_wifi">Wi-Fi</string>
+    <string name="iface_hotspot">Hotspot</string>
+    <string name="iface_usb">USB tethering</string>
+    <string name="iface_bluetooth">Bluetooth</string>
+    <string name="iface_ethernet">Ethernet</string>
+    <string name="iface_cellular">Mobile data</string>
+    <string name="iface_vpn">VPN</string>
+    <string name="iface_other">Network</string>
+
+    <string name="stat_active">Active connections</string>
+    <string name="stat_total">%1$d total</string>
+    <string name="stat_uptime">Uptime</string>
+    <string name="stat_uptime_caption">Since proxy start</string>
+    <string name="stat_upload">Uploaded</string>
+    <string name="stat_download">Downloaded</string>
+
+    <string name="howto_1">Connect the other device to the same Wi-Fi network, or to this phone\'s hotspot.</string>
+    <string name="howto_2">Open its proxy settings and choose SOCKS5 (SOCKS v5).</string>
+    <string name="howto_3">Enter the address and port shown above, plus the credentials if authentication is on.</string>
+
+    <string name="logs_empty_title">No activity yet</string>
+    <string name="logs_empty_body">Connections made through the proxy will appear here.</string>
+
+    <string name="settings_locked">Stop the proxy to change these settings.</string>
+    <string name="section_server">Server</string>
+    <string name="label_port">Port</string>
+    <string name="port_hint">Default is 1080. Use a value between 1024 and 65535.</string>
+    <string name="port_error">Enter a port between 1024 and 65535.</string>
+    <string name="section_auth">Authentication</string>
+    <string name="auth_title">Require username &amp; password</string>
+    <string name="auth_subtitle">Clients must log in before using the proxy.</string>
+    <string name="auth_required_hint">Username and password are both required.</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="section_power">Power</string>
+    <string name="keep_awake_title">Keep connection awake</string>
+    <string name="keep_awake_subtitle">Holds CPU and Wi-Fi locks while running so the proxy stays responsive with the screen off.</string>
+    <string name="section_about">About</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_protocol_title">Protocol</string>
+    <string name="about_protocol_body">SOCKS5 (RFC 1928) TCP CONNECT with optional username/password authentication (RFC 1929).</string>
+
+    <string name="auth_on">authentication on</string>
+    <string name="auth_off">no authentication</string>
+    <string name="log_started">Proxy started on port %1$d (%2$s)</string>
+    <string name="log_stopped">Proxy stopped</string>
+    <string name="error_auth_incomplete">Authentication is on but the username or password is empty.</string>
+    <string name="error_bind_failed">Cannot listen on port %1$d: %2$s</string>
+
+    <string name="notification_channel_name">Proxy status</string>
+    <string name="notification_channel_description">Shows while the SOCKS5 proxy is running.</string>
+    <string name="notification_title">SOCKS5 proxy is running</string>
+    <string name="notification_starting">Starting…</string>
+    <string name="notification_no_network">port %1$d (no network)</string>
+    <plurals name="notification_running">
+        <item quantity="one">%1$s · %2$d active connection</item>
+        <item quantity="other">%1$s · %2$d active connections</item>
+    </plurals>
+</resources>

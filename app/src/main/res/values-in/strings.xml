@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tagline">Server Proxy SOCKS5</string>
+
+    <string name="tab_home">Dasbor</string>
+    <string name="tab_logs">Aktivitas</string>
+    <string name="tab_settings">Pengaturan</string>
+
+    <string name="status_running">Berjalan</string>
+    <string name="status_starting">Memulai…</string>
+    <string name="status_stopped">Berhenti</string>
+    <string name="status_error">Gagal dimulai</string>
+    <string name="hint_running">Perangkat lain di jaringan Anda sekarang bisa terhubung melalui ponsel ini.</string>
+    <string name="hint_starting">Membuka port SOCKS5…</string>
+    <string name="hint_stopped">Ketuk tombol untuk membagikan koneksi internet ponsel ini lewat SOCKS5.</string>
+
+    <string name="action_start">Mulai proxy</string>
+    <string name="action_stop">Hentikan</string>
+    <string name="action_copy">Salin</string>
+    <string name="action_clear_logs">Hapus aktivitas</string>
+    <string name="action_toggle_password">Tampilkan atau sembunyikan sandi</string>
+    <string name="copied">Disalin ke papan klip</string>
+
+    <string name="section_endpoints">Alamat proxy</string>
+    <string name="section_credentials">Kredensial</string>
+    <string name="section_howto">Cara menghubungkan</string>
+    <string name="no_network">Tidak ada jaringan. Sambungkan ke Wi-Fi atau aktifkan hotspot.</string>
+
+    <string name="iface_wifi">Wi-Fi</string>
+    <string name="iface_hotspot">Hotspot</string>
+    <string name="iface_usb">Tethering USB</string>
+    <string name="iface_bluetooth">Bluetooth</string>
+    <string name="iface_ethernet">Ethernet</string>
+    <string name="iface_cellular">Data seluler</string>
+    <string name="iface_vpn">VPN</string>
+    <string name="iface_other">Jaringan</string>
+
+    <string name="stat_active">Koneksi aktif</string>
+    <string name="stat_total">%1$d total</string>
+    <string name="stat_uptime">Waktu aktif</string>
+    <string name="stat_uptime_caption">Sejak proxy dimulai</string>
+    <string name="stat_upload">Diunggah</string>
+    <string name="stat_download">Diunduh</string>
+
+    <string name="howto_1">Sambungkan perangkat lain ke Wi-Fi yang sama, atau ke hotspot ponsel ini.</string>
+    <string name="howto_2">Buka pengaturan proxy perangkat tersebut lalu pilih SOCKS5 (SOCKS v5).</string>
+    <string name="howto_3">Masukkan alamat dan port di atas, serta kredensial jika autentikasi aktif.</string>
+
+    <string name="logs_empty_title">Belum ada aktivitas</string>
+    <string name="logs_empty_body">Koneksi yang melewati proxy akan muncul di sini.</string>
+
+    <string name="settings_locked">Hentikan proxy untuk mengubah pengaturan ini.</string>
+    <string name="section_server">Server</string>
+    <string name="label_port">Port</string>
+    <string name="port_hint">Bawaan 1080. Gunakan nilai antara 1024 dan 65535.</string>
+    <string name="port_error">Masukkan port antara 1024 dan 65535.</string>
+    <string name="section_auth">Autentikasi</string>
+    <string name="auth_title">Wajib nama pengguna &amp; sandi</string>
+    <string name="auth_subtitle">Klien harus login sebelum memakai proxy.</string>
+    <string name="auth_required_hint">Nama pengguna dan sandi wajib diisi.</string>
+    <string name="label_username">Nama pengguna</string>
+    <string name="label_password">Sandi</string>
+    <string name="section_power">Daya</string>
+    <string name="keep_awake_title">Jaga koneksi tetap aktif</string>
+    <string name="keep_awake_subtitle">Menahan CPU dan Wi-Fi tetap menyala selama berjalan agar proxy responsif saat layar mati.</string>
+    <string name="section_about">Tentang</string>
+    <string name="about_version">Versi %1$s</string>
+    <string name="about_protocol_title">Protokol</string>
+    <string name="about_protocol_body">SOCKS5 (RFC 1928) TCP CONNECT dengan autentikasi nama pengguna/sandi opsional (RFC 1929).</string>
+
+    <string name="auth_on">autentikasi aktif</string>
+    <string name="auth_off">tanpa autentikasi</string>
+    <string name="log_started">Proxy dimulai di port %1$d (%2$s)</string>
+    <string name="log_stopped">Proxy dihentikan</string>
+    <string name="error_auth_incomplete">Autentikasi aktif tetapi nama pengguna atau sandi kosong.</string>
+    <string name="error_bind_failed">Tidak bisa membuka port %1$d: %2$s</string>
+
+    <string name="notification_channel_name">Status proxy</string>
+    <string name="notification_channel_description">Tampil selama proxy SOCKS5 berjalan.</string>
+    <string name="notification_title">Proxy SOCKS5 berjalan</string>
+    <string name="notification_starting">Memulai…</string>
+    <string name="notification_no_network">port %1$d (tanpa jaringan)</string>
+    <plurals name="notification_running">
+        <item quantity="other">%1$s · %2$d koneksi aktif</item>
+    </plurals>
+</resources>
