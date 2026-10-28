@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.screens
+package id.biz.id.cumi.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,10 +40,10 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import id.biz.id.kaoskaki.BuildConfig
-import id.biz.id.kaoskaki.R
-import id.biz.id.kaoskaki.data.ProxySettings
-import id.biz.id.kaoskaki.ui.components.SectionCard
+import id.biz.id.cumi.BuildConfig
+import id.biz.id.cumi.R
+import id.biz.id.cumi.data.ProxySettings
+import id.biz.id.cumi.ui.components.SectionCard
 
 @Composable
 fun SettingsScreen(

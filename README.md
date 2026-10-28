@@ -18,7 +18,7 @@ UDP `ASSOCIATE` and `BIND` are not supported; clients receive the standard "comm
 
 ## Quickstart
 
-1. Download the latest `KaosKaki-vX.Y.Z.apk` from [Releases](https://github.com/n0z0/kaoskaki/releases/latest) and install it on the phone that has the internet connection.
+1. Download the latest `KaosKaki-vX.Y.Z.apk` from [Releases](https://github.com/n0z0/cumi/releases/latest) and install it on the phone that has the internet connection.
 2. Open **KaosKaki** and tap the large **power button**. The status changes to **Running**.
 3. Connect your laptop (or other device) to the same Wi-Fi network, or to the phone's hotspot.
 4. On the laptop, set a **SOCKS5** proxy to the address shown under **Proxy address** (for example `192.168.43.1`, port `1080`).
@@ -201,7 +201,7 @@ CI reads the same key from repository secrets. Upload them with the GitHub CLI, 
 with admin access to the repository:
 
 ```sh
-./scripts/set-signing-secrets.sh            # defaults to n0z0/kaoskaki
+./scripts/set-signing-secrets.sh            # defaults to n0z0/cumi
 ```
 
 | Secret | Value |

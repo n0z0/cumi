@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.theme
+package id.biz.id.cumi.ui.theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

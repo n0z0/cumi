@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.theme
+package id.biz.id.cumi.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

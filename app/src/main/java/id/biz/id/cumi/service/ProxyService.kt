@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.service
+package id.biz.id.cumi.service
 
 import android.annotation.SuppressLint
 import android.app.Notification
@@ -17,15 +17,15 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import id.biz.id.kaoskaki.KaosKakiApplication
-import id.biz.id.kaoskaki.MainActivity
-import id.biz.id.kaoskaki.R
-import id.biz.id.kaoskaki.data.SettingsRepository
-import id.biz.id.kaoskaki.proxy.LogLevel
-import id.biz.id.kaoskaki.proxy.NetworkInfo
-import id.biz.id.kaoskaki.proxy.ProxyRuntime
-import id.biz.id.kaoskaki.proxy.ProxyStatus
-import id.biz.id.kaoskaki.proxy.Socks5Server
+import id.biz.id.cumi.KaosKakiApplication
+import id.biz.id.cumi.MainActivity
+import id.biz.id.cumi.R
+import id.biz.id.cumi.data.SettingsRepository
+import id.biz.id.cumi.proxy.LogLevel
+import id.biz.id.cumi.proxy.NetworkInfo
+import id.biz.id.cumi.proxy.ProxyRuntime
+import id.biz.id.cumi.proxy.ProxyStatus
+import id.biz.id.cumi.proxy.Socks5Server
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -216,8 +216,8 @@ class ProxyService : Service() {
 
     companion object {
         private const val NOTIFICATION_ID = 1080
-        private const val ACTION_START = "id.biz.id.kaoskaki.action.START"
-        private const val ACTION_STOP = "id.biz.id.kaoskaki.action.STOP"
+        private const val ACTION_START = "id.biz.id.cumi.action.START"
+        private const val ACTION_STOP = "id.biz.id.cumi.action.STOP"
 
         fun start(context: Context) {
             ContextCompat.startForegroundService(

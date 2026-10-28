@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.proxy
+package id.biz.id.cumi.proxy
 
 import android.os.SystemClock
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,7 +28,7 @@ enum class LogLevel { INFO, SUCCESS, WARNING, ERROR }
 data class LogEntry(val id: Long, val timestamp: Long, val level: LogLevel, val message: String)
 
 /**
- * Process-wide state shared between [id.biz.id.kaoskaki.service.ProxyService] and the UI.
+ * Process-wide state shared between [id.biz.id.cumi.service.ProxyService] and the UI.
  * Hot counters are plain atomics; [publish] snapshots them into [stats] once per tick.
  */
 object ProxyRuntime : Socks5Server.Events {

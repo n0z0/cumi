@@ -3,7 +3,7 @@
 _Effective date: 29 October 2026_
 
 KaosKaki ("the app") is an open-source SOCKS5 proxy server for Android, published by the KaosKaki
-developers (https://github.com/n0z0/kaoskaki).
+developers (https://github.com/n0z0/cumi).
 
 ## Summary
 
@@ -40,7 +40,7 @@ Changes to this policy are published in this file in the project repository, wit
 
 ## Contact
 
-Questions about this policy: open an issue at https://github.com/n0z0/kaoskaki/issues
+Questions about this policy: open an issue at https://github.com/n0z0/cumi/issues
 
 ---
 
@@ -58,4 +58,4 @@ iklan, analitik, maupun pelaporan crash, dan tidak pernah mengirim data ke penge
 
 Pencadangan cloud Android dinonaktifkan untuk aplikasi ini.
 
-Pertanyaan tentang kebijakan ini: buka issue di https://github.com/n0z0/kaoskaki/issues
+Pertanyaan tentang kebijakan ini: buka issue di https://github.com/n0z0/cumi/issues

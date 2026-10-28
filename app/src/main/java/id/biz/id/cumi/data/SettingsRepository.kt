@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.data
+package id.biz.id.cumi.data
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences

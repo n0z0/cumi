@@ -4,7 +4,7 @@
 # Requires the GitHub CLI logged in as an account with admin access to the repo.
 set -euo pipefail
 
-repo="${1:-n0z0/kaoskaki}"
+repo="${1:-n0z0/cumi}"
 root="$(cd "$(dirname "$0")/.." && pwd)"
 props="$root/keystore.properties"
 

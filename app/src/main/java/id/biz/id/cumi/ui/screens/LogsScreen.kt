@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.screens
+package id.biz.id.cumi.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -29,11 +29,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import id.biz.id.kaoskaki.R
-import id.biz.id.kaoskaki.proxy.LogEntry
-import id.biz.id.kaoskaki.proxy.LogLevel
-import id.biz.id.kaoskaki.ui.theme.MonoStyle
-import id.biz.id.kaoskaki.ui.theme.StatusColors
+import id.biz.id.cumi.R
+import id.biz.id.cumi.proxy.LogEntry
+import id.biz.id.cumi.proxy.LogLevel
+import id.biz.id.cumi.ui.theme.MonoStyle
+import id.biz.id.cumi.ui.theme.StatusColors
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

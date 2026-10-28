@@ -22,11 +22,11 @@ val releaseKeystore: String? = System.getenv("SIGNING_KEYSTORE_PATH")
     ?: keystoreProps.getProperty("storeFile")?.let { rootProject.file(it).path }
 
 android {
-    namespace = "id.biz.id.kaoskaki"
+    namespace = "id.biz.id.cumi"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "id.biz.id.kaoskaki"
+        applicationId = "id.biz.id.cumi"
         minSdk = 26
         targetSdk = 36
         versionCode = appVersionCode

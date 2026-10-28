@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki
+package id.biz.id.cumi
 
 import android.app.Application
 import android.app.NotificationChannel

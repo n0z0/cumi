@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.proxy
+package id.biz.id.cumi.proxy
 
 import java.util.Locale
 

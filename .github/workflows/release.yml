@@ -128,7 +128,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ env.PLAY_SERVICE_ACCOUNT_JSON }}
-          packageName: id.biz.id.kaoskaki
+          packageName: id.biz.id.cumi
           releaseFiles: ${{ steps.artifacts.outputs.base }}.aab
           releaseName: ${{ steps.version.outputs.tag }}
           track: ${{ vars.PLAY_TRACK || 'internal' }}

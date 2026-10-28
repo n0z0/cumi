@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.components
+package id.biz.id.cumi.ui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.LinearEasing

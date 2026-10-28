@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui.screens
+package id.biz.id.cumi.ui.screens
 
 import android.os.SystemClock
 import androidx.compose.foundation.background
@@ -55,19 +55,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import id.biz.id.kaoskaki.R
-import id.biz.id.kaoskaki.data.ProxySettings
-import id.biz.id.kaoskaki.proxy.Formatters
-import id.biz.id.kaoskaki.proxy.InterfaceKind
-import id.biz.id.kaoskaki.proxy.LanAddress
-import id.biz.id.kaoskaki.proxy.ProxyStatus
-import id.biz.id.kaoskaki.proxy.TrafficStats
-import id.biz.id.kaoskaki.ui.components.PowerButton
-import id.biz.id.kaoskaki.ui.components.SectionCard
-import id.biz.id.kaoskaki.ui.components.StatTile
-import id.biz.id.kaoskaki.ui.components.StatusPill
-import id.biz.id.kaoskaki.ui.theme.MonoStyle
-import id.biz.id.kaoskaki.ui.theme.StatusColors
+import id.biz.id.cumi.R
+import id.biz.id.cumi.data.ProxySettings
+import id.biz.id.cumi.proxy.Formatters
+import id.biz.id.cumi.proxy.InterfaceKind
+import id.biz.id.cumi.proxy.LanAddress
+import id.biz.id.cumi.proxy.ProxyStatus
+import id.biz.id.cumi.proxy.TrafficStats
+import id.biz.id.cumi.ui.components.PowerButton
+import id.biz.id.cumi.ui.components.SectionCard
+import id.biz.id.cumi.ui.components.StatTile
+import id.biz.id.cumi.ui.components.StatusPill
+import id.biz.id.cumi.ui.theme.MonoStyle
+import id.biz.id.cumi.ui.theme.StatusColors
 import kotlinx.coroutines.delay
 
 @Composable

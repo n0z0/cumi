@@ -7,7 +7,7 @@ Panduan langkah demi langkah untuk merilis KaosKaki di Google Play. Semua bahan 
 | Judul, deskripsi singkat & penuh (EN / ID) | `fastlane/metadata/android/{en-US,id}/*.txt` |
 | Ikon 512×512, feature graphic 1024×500 | `fastlane/metadata/android/{en-US,id}/images/` (render ulang: `python3 fastlane/assets/render.py`) |
 | Screenshot ponsel | `fastlane/metadata/android/{en-US,id}/images/phoneScreenshots/` (**perlu diisi**, lihat langkah 5) |
-| Kebijakan privasi | `PRIVACY.md` → `https://github.com/n0z0/kaoskaki/blob/main/PRIVACY.md` |
+| Kebijakan privasi | `PRIVACY.md` → `https://github.com/n0z0/cumi/blob/main/PRIVACY.md` |
 | File unggahan (AAB) | Lampiran setiap GitHub Release: `KaosKaki-vX.Y.Z.aab` |
 
 ## 1. Akun developer
@@ -37,7 +37,7 @@ menjadi **upload key**, terdaftar otomatis saat AAB pertama diunggah.
 
 API Play tidak bisa membuat rilis pertama, jadi unggahan pertama dilakukan lewat browser:
 
-1. Unduh `KaosKaki-vX.Y.Z.aab` dari [Releases](https://github.com/n0z0/kaoskaki/releases/latest).
+1. Unduh `KaosKaki-vX.Y.Z.aab` dari [Releases](https://github.com/n0z0/cumi/releases/latest).
 2. *Test and release → Testing → Internal testing → Create new release* → unggah AAB → isi catatan rilis → **Save** → **Review release** → **Start rollout**.
 3. Tambahkan email penguji di tab *Testers*.
 
@@ -60,7 +60,7 @@ API Play tidak bisa membuat rilis pertama, jadi unggahan pertama dilakukan lewat
 *Store settings*:
 
 - App category: **Tools**
-- Contact details: email developer (wajib), website `https://github.com/n0z0/kaoskaki`
+- Contact details: email developer (wajib), website `https://github.com/n0z0/cumi`
 
 ## 6. App content (Policy → App content)
 
@@ -68,7 +68,7 @@ Jawaban yang sesuai dengan perilaku aplikasi:
 
 | Bagian | Jawaban |
 | --- | --- |
-| **Privacy policy** | `https://github.com/n0z0/kaoskaki/blob/main/PRIVACY.md` |
+| **Privacy policy** | `https://github.com/n0z0/cumi/blob/main/PRIVACY.md` |
 | **Ads** | No, my app does not contain ads |
 | **App access** | All functionality is available without special access |
 | **Content rating** | Kategori *All Other App Types*. Jawab **No** untuk semua pertanyaan konten (kekerasan, seksual, judi, dll.) dan interaksi pengguna. Hasil yang diharapkan: semua umur / PEGI 3 |
@@ -114,16 +114,16 @@ Setelah unggahan pertama selesai, setiap push ke `main` bisa langsung mengunggah
 3. **GitHub** (login `gh` sebagai `awangga`):
 
    ```sh
-   gh secret set PLAY_SERVICE_ACCOUNT_JSON -R n0z0/kaoskaki < play-service-account.json
+   gh secret set PLAY_SERVICE_ACCOUNT_JSON -R n0z0/cumi < play-service-account.json
    # Selama aplikasi belum pernah dipublikasikan, rilis harus berstatus draft:
-   gh variable set PLAY_RELEASE_STATUS -R n0z0/kaoskaki --body draft
+   gh variable set PLAY_RELEASE_STATUS -R n0z0/cumi --body draft
    # Track tujuan (bawaan: internal). Pilihan: internal, alpha (closed), beta (open), production
-   gh variable set PLAY_TRACK -R n0z0/kaoskaki --body internal
+   gh variable set PLAY_TRACK -R n0z0/cumi --body internal
    ```
 
    Hapus file JSON dari laptop setelahnya (atau simpan di password manager).
 4. Setelah aplikasi lolos review pertama, hapus variabel draft agar rilis langsung aktif:
-   `gh variable delete PLAY_RELEASE_STATUS -R n0z0/kaoskaki`
+   `gh variable delete PLAY_RELEASE_STATUS -R n0z0/cumi`
 
 Pastikan terjemahan Indonesia (langkah 5) sudah ditambahkan, karena workflow juga mengirim "What's new" untuk locale `id`.
 

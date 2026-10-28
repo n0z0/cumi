@@ -1,17 +1,17 @@
-package id.biz.id.kaoskaki.ui
+package id.biz.id.cumi.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import id.biz.id.kaoskaki.data.ProxySettings
-import id.biz.id.kaoskaki.data.SettingsRepository
-import id.biz.id.kaoskaki.proxy.LanAddress
-import id.biz.id.kaoskaki.proxy.LogEntry
-import id.biz.id.kaoskaki.proxy.NetworkInfo
-import id.biz.id.kaoskaki.proxy.ProxyRuntime
-import id.biz.id.kaoskaki.proxy.ProxyStatus
-import id.biz.id.kaoskaki.proxy.TrafficStats
-import id.biz.id.kaoskaki.service.ProxyService
+import id.biz.id.cumi.data.ProxySettings
+import id.biz.id.cumi.data.SettingsRepository
+import id.biz.id.cumi.proxy.LanAddress
+import id.biz.id.cumi.proxy.LogEntry
+import id.biz.id.cumi.proxy.NetworkInfo
+import id.biz.id.cumi.proxy.ProxyRuntime
+import id.biz.id.cumi.proxy.ProxyStatus
+import id.biz.id.cumi.proxy.TrafficStats
+import id.biz.id.cumi.service.ProxyService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

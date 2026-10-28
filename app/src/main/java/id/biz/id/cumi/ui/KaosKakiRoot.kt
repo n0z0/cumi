@@ -1,4 +1,4 @@
-package id.biz.id.kaoskaki.ui
+package id.biz.id.cumi.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -39,11 +39,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import id.biz.id.kaoskaki.R
-import id.biz.id.kaoskaki.proxy.ProxyStatus
-import id.biz.id.kaoskaki.ui.screens.HomeScreen
-import id.biz.id.kaoskaki.ui.screens.LogsScreen
-import id.biz.id.kaoskaki.ui.screens.SettingsScreen
+import id.biz.id.cumi.R
+import id.biz.id.cumi.proxy.ProxyStatus
+import id.biz.id.cumi.ui.screens.HomeScreen
+import id.biz.id.cumi.ui.screens.LogsScreen
+import id.biz.id.cumi.ui.screens.SettingsScreen
 import kotlinx.coroutines.launch
 
 private enum class Tab(@StringRes val label: Int, val icon: ImageVector) {

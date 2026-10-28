@@ -1,11 +1,11 @@
-package id.biz.id.kaoskaki
+package id.biz.id.cumi
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import id.biz.id.kaoskaki.ui.KaosKakiRoot
-import id.biz.id.kaoskaki.ui.theme.KaosKakiTheme
+import id.biz.id.cumi.ui.KaosKakiRoot
+import id.biz.id.cumi.ui.theme.KaosKakiTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
